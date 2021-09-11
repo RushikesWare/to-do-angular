@@ -1,0 +1,8 @@
+.my-icon a{
+    padding-left: 20px;    
+}
+
+.my-icon .delete{
+    color: red;
+    cursor: pointer;
+}

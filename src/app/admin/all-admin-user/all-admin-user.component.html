@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+        <h1 class="text-center">My All Admin User</h1>
+        <table class="table border table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Address</th>
+                <th scope="col">Email</th>
+                <th scope="col">Number</th>
+                <th scope="col">City</th>
+                <th scope="col">Birth Date</th>
+                <th scope="col">Update/Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of myData; let i = index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{user.firstName}}</td>
+                <td>{{user.lastName}}</td>
+                <td>{{user.gender}}</td>
+                <td>{{user.address}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.number}}</td>
+                <td>{{user.city}}</td>
+                <td>{{user.birthDate}}</td>
+                <td class="my-icon">
+                  
+                  <a routerLink="/update">
+                    <span class="material-icons">
+                      edit
+                      </span>
+                  </a>
+                  <a  class="delete" >
+                    <span class="material-icons" (click)="deleteUser(user.id)">
+                      delete
+                      </span>
+                  </a>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+    </div>
+</div>
